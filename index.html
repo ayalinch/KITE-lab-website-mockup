@@ -7,113 +7,47 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="font-sans text-gray-800">
+  <body class="font-sans text-gray-800 bg-white">
     <!-- Landing Section -->
-    <section
-      class="h-screen flex flex-col md:flex-row items-center justify-between px-12 bg-gray-50"
-    >
-      <!-- Contact info -->
-      <div class="text-left space-y-2">
-        <h1 class="text-4xl font-bold">Contact Us</h1>
-        <p>Email: info@company.com</p>
-        <p>Phone: (123) 456-7890</p>
+    <section class="h-screen flex flex-col md:flex-row items-center justify-between px-12 bg-gradient-to-r from-blue-600 to-blue-400 text-white">
+      <!-- Company name -->
+      <div class="text-left">
+        <h1 class="text-6xl font-extrabold drop-shadow-lg">Company Name</h1>
       </div>
 
-      <!-- Company name -->
-      <div class="text-right">
-        <h1 class="text-6xl font-extrabold">Company Name</h1>
+      <!-- Contact info -->
+      <div class="text-right space-y-2">
+        <h1 class="text-3xl font-bold">Contact Us</h1>
+        <p>Email: info@company.com</p>
+        <p>Phone: (123) 456-7890</p>
       </div>
     </section>
 
     <!-- Horizontal Labs Section -->
-    <section class="py-12 bg-white">
-      <h2 class="text-3xl font-semibold text-center mb-8">Our Labs</h2>
-      <div
-        class="flex overflow-x-auto space-x-6 px-6 pb-6 scrollbar-thin scrollbar-thumb-gray-400"
-      >
-        <!-- Repeat for 14 labs -->
-        <div
-          class="flex-shrink-0 w-64 bg-gray-100 rounded-2xl shadow p-4 text-center"
-        >
-          <img
-            src="https://via.placeholder.com/400x250?text=Lab+1"
-            alt="Lab 1"
-            class="rounded-xl mb-4"
-          />
-          <h3 class="text-lg font-bold">Lab 1</h3>
-        </div>
-        <div
-          class="flex-shrink-0 w-64 bg-gray-100 rounded-2xl shadow p-4 text-center"
-        >
-          <img
-            src="https://via.placeholder.com/400x250?text=Lab+2"
-            alt="Lab 2"
-            class="rounded-xl mb-4"
-          />
-          <h3 class="text-lg font-bold">Lab 2</h3>
-        </div>
-        <div
-          class="flex-shrink-0 w-64 bg-gray-100 rounded-2xl shadow p-4 text-center"
-        >
-          <img
-            src="https://via.placeholder.com/400x250?text=Lab+3"
-            alt="Lab 3"
-            class="rounded-xl mb-4"
-          />
-          <h3 class="text-lg font-bold">Lab 3</h3>
-        </div>
-        <!-- ... add Labs 4–14 the same way -->
+    <section class="py-12 bg-gray-50">
+      <h2 class="text-3xl font-semibold text-center mb-8 text-blue-700">Our Labs</h2>
+      <div class="flex overflow-x-auto space-x-6 px-6 pb-6">
+        <!-- 14 lab cards -->
+        <!-- Repeat -->
+        ${Array.from({ length: 14 }, (_, i) => `
+        <div class="flex-shrink-0 w-64 bg-white border border-blue-200 rounded-2xl shadow-md p-4 text-center hover:shadow-lg transition">
+          <img src="https://via.placeholder.com/400x250?text=Lab+${i+1}" alt="Lab ${i+1}" class="rounded-xl mb-4" />
+          <h3 class="text-lg font-bold text-blue-700">Lab ${i+1}</h3>
+        </div>`).join("")}
       </div>
     </section>
 
     <!-- Detailed Labs Section -->
-    <section class="space-y-16 px-8 py-12 bg-gray-50">
-      <!-- Example: alternating layout -->
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <img
-          src="https://via.placeholder.com/400x250?text=Lab+1"
-          alt="Lab 1"
-          class="w-full md:w-1/2 rounded-2xl shadow"
-        />
+    <section class="space-y-16 px-8 py-12 bg-white">
+      <!-- 14 alternating detail rows -->
+      ${Array.from({ length: 14 }, (_, i) => `
+      <div class="flex flex-col md:flex-row ${i % 2 === 1 ? "md:flex-row-reverse" : ""} items-center gap-8">
+        <img src="https://via.placeholder.com/400x250?text=Lab+${i+1}" alt="Lab ${i+1}" class="w-full md:w-1/2 rounded-2xl shadow-lg border border-blue-200" />
         <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2">Lab 1</h3>
-          <p class="text-gray-600">
-            This is a description of Lab 1. It focuses on cutting-edge research
-            and innovative technology.
-          </p>
+          <h3 class="text-2xl font-bold mb-2 text-blue-700">Lab ${i+1}</h3>
+          <p class="text-gray-600">Description for Lab ${i+1}. Replace this with the real research focus and key highlights.</p>
         </div>
-      </div>
-
-      <div class="flex flex-col md:flex-row-reverse items-center gap-8">
-        <img
-          src="https://via.placeholder.com/400x250?text=Lab+2"
-          alt="Lab 2"
-          class="w-full md:w-1/2 rounded-2xl shadow"
-        />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2">Lab 2</h3>
-          <p class="text-gray-600">
-            This is a description of Lab 2. It specializes in applied research
-            and interdisciplinary projects.
-          </p>
-        </div>
-      </div>
-
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <img
-          src="https://via.placeholder.com/400x250?text=Lab+3"
-          alt="Lab 3"
-          class="w-full md:w-1/2 rounded-2xl shadow"
-        />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2">Lab 3</h3>
-          <p class="text-gray-600">
-            This is a description of Lab 3. It explores innovative approaches in
-            biotechnology and medicine.
-          </p>
-        </div>
-      </div>
-      <!-- ...continue alternating for Labs 4–14 -->
+      </div>`).join("")}
     </section>
   </body>
 </html>
