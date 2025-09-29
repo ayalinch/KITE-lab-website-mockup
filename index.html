@@ -6,202 +6,296 @@
     <title>Company Website Mockup</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
   <body class="font-sans text-gray-800 bg-white">
-    <!-- Landing Section -->
-    <section 
-  class="h-screen flex flex-col md:flex-row items-start justify-between px-12 pt-16 bg-cover bg-center text-white"
-  style="background-image: url('https://kite-uhn-photos.s3.ca-central-1.amazonaws.com/story-I-am-Kite.png');"
->
-     <!-- Company name -->
-  <div class="text-left bg-black/40 p-6 rounded-lg">
-    <h1 class="text-6xl font-extrabold">NOT KITE</h1>
-  </div>
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur z-50 shadow">
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
+        <div class="flex items-center space-x-3">
+          <!-- Actual KITE logo SVG from kite-uhn.com -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 74" class="h-10 w-10"><g><path fill="#00B2E3" d="M37 0C16.57 0 0 16.57 0 37s16.57 37 37 37 37-16.57 37-37S57.43 0 37 0zm0 70C18.67 70 4 55.33 4 37S18.67 4 37 4s33 14.67 33 33-14.67 33-33 33z"/><path fill="#00B2E3" d="M37 8C22.19 8 10 20.19 10 35c0 14.81 12.19 27 27 27s27-12.19 27-27C64 20.19 51.81 8 37 8zm0 50c-12.68 0-23-10.32-23-23S24.32 12 37 12s23 10.32 23 23-10.32 23-23 23z"/><path fill="#00B2E3" d="M37 16c-10.49 0-19 8.51-19 19s8.51 19 19 19 19-8.51 19-19-8.51-19-19-19zm0 34c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15z"/></g></svg>
+          <span class="text-2xl font-extrabold text-blue-800 tracking-tight">KITE Labs</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#" class="text-blue-800 font-semibold hover:text-blue-600 transition">Home</a>
+          <a href="#labs" class="text-blue-800 font-semibold hover:text-blue-600 transition">Labs</a>
+          <a href="#about" class="text-blue-800 font-semibold hover:text-blue-600 transition">About</a>
+          <a href="#contact" class="text-blue-800 font-semibold hover:text-blue-600 transition">Contact</a>
+        </div>
+        <a href="#booking" class="hidden md:inline-block bg-blue-700 text-white px-5 py-2 rounded-lg font-bold shadow hover:bg-blue-800 transition">Book a Tour</a>
+      </div>
+    </nav>
 
-  <!-- Contact info -->
-  <div class="text-right bg-black/40 p-6 rounded-lg space-y-2">
-    <h1 class="text-3xl font-bold">Contact Us</h1>
-    <p>Email: info@company.com</p>
-    <p>Phone: (123) 456-7890</p>
-    <p>Booking: XXXXXXXXX</p>
-  </div>
-</section>
-
-    <!-- Horizontal Labs Section -->
-    <section class="py-12 bg-white">
-      <h2 class="text-3xl font-semibold text-center mb-8 text-blue-700">Our Labs</h2>
-      <div class="flex overflow-x-auto space-x-6 px-6 pb-6">
-        <!-- 14 lab cards -->
-        <!-- Each card -->
-        <div class="flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center hover:shadow-lg transition">
-          <img src="https://kite-uhn-photos.s3.ca-central-1.amazonaws.com/labs_careLab3.jpg" alt="Lab 1" class="rounded-xl mb-4" />
-          <h3 class="text-lg font-bold text-blue-700">CareLab</h3>
-        </div>
-        <div class="flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x250/2563EB/FFFFFF?text=Lab+2" alt="Lab 2" class="rounded-xl mb-4" />
-          <h3 class="text-lg font-bold text-blue-700">Lab 2</h3>
-        </div>
-        <div class="flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x250/1D4ED8/FFFFFF?text=Lab+3" alt="Lab 3" class="rounded-xl mb-4" />
-          <h3 class="text-lg font-bold text-blue-700">Lab 3</h3>
-        </div>
-        <div class="flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=Lab+4" alt="Lab 4" class="rounded-xl mb-4" />
-          <h3 class="text-lg font-bold text-blue-700">Lab 4</h3>
-        </div>
-        <div class="flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x250/2563EB/FFFFFF?text=Lab+5" alt="Lab 5" class="rounded-xl mb-4" />
-          <h3 class="text-lg font-bold text-blue-700">Lab 5</h3>
-        </div>
-        <div class="flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x250/1D4ED8/FFFFFF?text=Lab+6" alt="Lab 6" class="rounded-xl mb-4" />
-          <h3 class="text-lg font-bold text-blue-700">Lab 6</h3>
-        </div>
-        <div class="flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=Lab+7" alt="Lab 7" class="rounded-xl mb-4" />
-          <h3 class="text-lg font-bold text-blue-700">Lab 7</h3>
-        </div>
-        <div class="flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x250/2563EB/FFFFFF?text=Lab+8" alt="Lab 8" class="rounded-xl mb-4" />
-          <h3 class="text-lg font-bold text-blue-700">Lab 8</h3>
-        </div>
-        <div class="flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x250/1D4ED8/FFFFFF?text=Lab+9" alt="Lab 9" class="rounded-xl mb-4" />
-          <h3 class="text-lg font-bold text-blue-700">Lab 9</h3>
-        </div>
-        <div class="flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=Lab+10" alt="Lab 10" class="rounded-xl mb-4" />
-          <h3 class="text-lg font-bold text-blue-700">Lab 10</h3>
-        </div>
-        <div class="flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x250/2563EB/FFFFFF?text=Lab+11" alt="Lab 11" class="rounded-xl mb-4" />
-          <h3 class="text-lg font-bold text-blue-700">Lab 11</h3>
-        </div>
-        <div class="flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x250/1D4ED8/FFFFFF?text=Lab+12" alt="Lab 12" class="rounded-xl mb-4" />
-          <h3 class="text-lg font-bold text-blue-700">Lab 12</h3>
-        </div>
-        <div class="flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center">
-          <img src="https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=Lab+13" alt="Lab 13" class="rounded-xl mb-4" />
-          <h3 class="text-lg font-bold text-blue-700">Lab 13</h3>
-        </div>
-        <div class="flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center">
-          <img src="https://via.placeholder.com/400x250/2563EB/FFFFFF?text=Lab+14" alt="Lab 14" class="rounded-xl mb-4" />
-          <h3 class="text-lg font-bold">Lab 14</h3>
+    <!-- Hero Section with video and liquid glass overlay -->
+    <section class="relative h-[70vh] flex items-center justify-center bg-black" style="margin-top:64px;">
+      <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="https://www.kite-uhn.com/Content/videos/labs_video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-blue-800/60 to-blue-600/40"></div>
+      <div class="relative z-10 max-w-2xl mx-auto flex flex-col items-center px-6">
+        <div class="backdrop-blur-xl bg-white/30 rounded-3xl shadow-2xl border border-white/40 p-10 flex flex-col items-center" style="box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);">
+          <h1 class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg mb-6">Innovating the Future of Rehabilitation</h1>
+          <p class="text-xl md:text-2xl text-blue-100 mb-8">World-class labs, research, and technology for better health and independence.</p>
+          <a href="#labs" id="explore-labs-btn" class="inline-block bg-white text-blue-800 font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 hover:text-white transition mb-4">Explore Our Labs</a>
+          <a href="#contact" class="inline-block bg-blue-700 text-white font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-800 transition">Contact Us</a>
         </div>
       </div>
     </section>
 
-    <!-- Detailed Labs Section -->
+    <!-- Horizontal Labs Section with arrows -->
+    <section id="labs" class="py-12 bg-white">
+      <h2 class="text-3xl font-semibold text-center mb-8 text-blue-700">Our Labs</h2>
+      <div class="relative">
+        <!-- Left Arrow -->
+        <button id="scroll-left" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow rounded-full p-2 hover:bg-blue-100 transition hidden md:block">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <!-- Right Arrow -->
+        <button id="scroll-right" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow rounded-full p-2 hover:bg-blue-100 transition hidden md:block">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+        <div id="labs-cards-container" class="flex overflow-x-auto space-x-6 px-6 pb-6 scroll-smooth">
+          <!-- Lab cards will be injected here by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Labs Section with gradient image overlay and larger text -->
     <section class="space-y-16 px-8 py-12 bg-gray-50">
-      <!-- Repeat for 14 labs -->
+      <!-- Only first 5 labs, all with same format, then "…and many more." -->
       <!-- Lab 1 -->
       <div class="flex flex-col md:flex-row items-center gap-8">
-        <img src="https://kite-uhn-photos.s3.ca-central-1.amazonaws.com/labs_careLab4.jpg" alt="Lab 1" class="w-full md:w-1/2 rounded-2xl shadow-lg border border-blue-200" />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2 text-blue-700">CareLab</h3>
-          <p class="text-gray-600">CareLab consists of a simulated patient care environment for research purposes based on a typical hospital single patient room.</p>
+        <div class="relative w-full md:w-1/2">
+          <img src="https://kite-uhn-photos.s3.ca-central-1.amazonaws.com/labs_careLab3.jpg" alt="CareLab" class="w-full h-80 object-cover rounded-2xl shadow-lg border border-blue-200" />
+          <div class="absolute inset-0 rounded-2xl pointer-events-none" style="background: linear-gradient(to right, rgba(255,255,255,0) 60%, #f9fafb 100%);"></div>
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col justify-center">
+          <h3 class="text-4xl font-extrabold mb-4 text-blue-700">CareLab</h3>
+          <p class="text-2xl text-gray-700 leading-relaxed mb-4">CareLab consists of a simulated patient care environment for research purposes based on a typical hospital single patient room.</p>
+          <a href="https://kite-uhn.com/labs/carelab" target="_blank" class="inline-block text-blue-700 font-bold hover:underline text-lg">Read more &rarr;</a>
         </div>
       </div>
       <!-- Lab 2 -->
       <div class="flex flex-col md:flex-row-reverse items-center gap-8">
-        <img src="https://kite-uhn-photos.s3.ca-central-1.amazonaws.com/labs_climateLab_carousel.jpg" alt="Lab 2" class="w-full md:w-1/2 rounded-2xl shadow-lg border border-blue-200" />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2 text-blue-700">ClimateLab</h3>
-          <p class="text-gray-600">This lab's temperature can be set between -20°C to +35°C to simulate a wide range of conditions to test clothing, footwear and assistive technology for people with diverse ages and abilities.</p>
+        <div class="relative w-full md:w-1/2">
+          <img src="https://kite-uhn-photos.s3.ca-central-1.amazonaws.com/labs_climateLab_carousel.jpg" alt="ClimateLab" class="w-full h-80 object-cover rounded-2xl shadow-lg border border-blue-200" />
+          <div class="absolute inset-0 rounded-2xl pointer-events-none" style="background: linear-gradient(to left, rgba(255,255,255,0) 60%, #f9fafb 100%);"></div>
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col justify-center">
+          <h3 class="text-4xl font-extrabold mb-4 text-blue-700">ClimateLab</h3>
+          <p class="text-2xl text-gray-700 leading-relaxed mb-4">This lab's temperature can be set between -20°C to +35°C to simulate a wide range of conditions to test clothing, footwear and assistive technology for people with diverse ages and abilities.</p>
+          <a href="https://kite-uhn.com/labs/climatelab" target="_blank" class="inline-block text-blue-700 font-bold hover:underline text-lg">Read more &rarr;</a>
         </div>
       </div>
       <!-- Lab 3 -->
       <div class="flex flex-col md:flex-row items-center gap-8">
-        <img src="https://www.kite-uhn.com/Content/videos/labs_video.mp4" alt="Lab 3" class="w-full md:w-1/2 rounded-2xl shadow-lg border border-blue-200" />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2 text-blue-700">DriverLab</h3>
-          <p class="text-gray-600">With vehicles as the leading cause of death in Canada, DriverLab uses simulation to develop tests and recommendations for fitness and safety for driving and investigating effects of health and medications on driving.</p>
+        <div class="relative w-full md:w-1/2">
+          <img src="https://kite-uhn-photos.s3.ca-central-1.amazonaws.com/labs_driverLab_carousel.jpg" alt="DriverLab" class="w-full h-80 object-cover rounded-2xl shadow-lg border border-blue-200" />
+          <div class="absolute inset-0 rounded-2xl pointer-events-none" style="background: linear-gradient(to right, rgba(255,255,255,0) 60%, #f9fafb 100%);"></div>
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col justify-center">
+          <h3 class="text-4xl font-extrabold mb-4 text-blue-700">DriverLab</h3>
+          <p class="text-2xl text-gray-700 leading-relaxed mb-4">With vehicles as the leading cause of death in Canada, DriverLab uses simulation to develop tests and recommendations for fitness and safety for driving and investigating effects of health and medications on driving.</p>
+          <a href="https://kite-uhn.com/labs/driverlab" target="_blank" class="inline-block text-blue-700 font-bold hover:underline text-lg">Read more &rarr;</a>
         </div>
       </div>
       <!-- Lab 4 -->
       <div class="flex flex-col md:flex-row-reverse items-center gap-8">
-        <img src="https://kite-uhn-photos.s3.ca-central-1.amazonaws.com/labs_fallsLab_carousel.JPG" alt="Lab 4" class="w-full md:w-1/2 rounded-2xl shadow-lg border border-blue-200" />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2 text-blue-700">FallsLab</h3>
-          <p class="text-gray-600">The objective of FallsLab is to understand balance and gait, develop therapies for people with conditions that increase the risk of falls, and to design and test technologies that prevent or mitigate falls and/or balance loss related injuries.</p>
+        <div class="relative w-full md:w-1/2">
+          <img src="https://kite-uhn-photos.s3.ca-central-1.amazonaws.com/labs_fallsLab_carousel.JPG" alt="FallsLab" class="w-full h-80 object-cover rounded-2xl shadow-lg border border-blue-200" />
+          <div class="absolute inset-0 rounded-2xl pointer-events-none" style="background: linear-gradient(to left, rgba(255,255,255,0) 60%, #f9fafb 100%);"></div>
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col justify-center">
+          <h3 class="text-4xl font-extrabold mb-4 text-blue-700">FallsLab</h3>
+          <p class="text-2xl text-gray-700 leading-relaxed mb-4">The objective of FallsLab is to understand balance and gait, develop therapies for people with conditions that increase the risk of falls, and to design and test technologies that prevent or mitigate falls and/or balance loss related injuries.</p>
+          <a href="https://kite-uhn.com/labs/fallslab" target="_blank" class="inline-block text-blue-700 font-bold hover:underline text-lg">Read more &rarr;</a>
         </div>
       </div>
       <!-- Lab 5 -->
       <div class="flex flex-col md:flex-row items-center gap-8">
-        <img src="https://kite-uhn-photos.s3.ca-central-1.amazonaws.com/labs_homeLab_carousel.jpg" alt="Lab 5" class="w-full md:w-1/2 rounded-2xl shadow-lg border border-blue-200" />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2 text-blue-700">HomeLab</h3>
-          <p class="text-gray-600">HomeLab enables researchers to study how to help older people and people with challenges live safely and as independently as possible at home.</p>
+        <div class="relative w-full md:w-1/2">
+          <img src="https://kite-uhn-photos.s3.ca-central-1.amazonaws.com/labs_homeLab_carousel.jpg" alt="HomeLab" class="w-full h-80 object-cover rounded-2xl shadow-lg border border-blue-200" />
+          <div class="absolute inset-0 rounded-2xl pointer-events-none" style="background: linear-gradient(to right, rgba(255,255,255,0) 60%, #f9fafb 100%);"></div>
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col justify-center">
+          <h3 class="text-4xl font-extrabold mb-4 text-blue-700">HomeLab</h3>
+          <p class="text-2xl text-gray-700 leading-relaxed mb-4">HomeLab enables researchers to study how to help older people and people with challenges live safely and as independently as possible at home.</p>
+          <a href="https://kite-uhn.com/labs/homelab" target="_blank" class="inline-block text-blue-700 font-bold hover:underline text-lg">Read more &rarr;</a>
         </div>
       </div>
-      <!-- Lab 6 -->
-      <div class="flex flex-col md:flex-row-reverse items-center gap-8">
-        <img src="https://kite-uhn-photos.s3.ca-central-1.amazonaws.com/labs_motionBase_carousel.jpg" alt="Lab 6" class="w-full md:w-1/2 rounded-2xl shadow-lg border border-blue-200" />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2 text-blue-700">MotionBase</h3>
-          <p class="text-gray-600">One of the central features in KITE’s Challenging Environment Assessment Laboratory (CEAL) is a large six degree of freedom motion system.</p>
+      <!-- ...and many more -->
+      <div class="text-center text-2xl text-blue-700 font-bold pt-8">…and many more.</div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-blue-900 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <h2 class="text-3xl font-bold">NOT KITE</h2>
+            <p class="text-gray-300">Innovating the future of healthcare.</p>
+          </div>
+          <div class="flex flex-col md:flex-row md:space-x-8">
+            <div class="mb-4 md:mb-0">
+              <h3 class="text-lg font-semibold">Quick Links</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition">Home</a></li>
+                <li><a href="#labs" class="text-gray-300 hover:text-white transition">Labs</a></li>
+                <li><a href="#about" class="text-gray-300 hover:text-white transition">About Us</a></li>
+                <li><a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a></li>
+              </ul>
+            </div>
+            <div class="mb-4 md:mb-0">
+              <h3 class="text-lg font-semibold">Follow Us</h3>
+              <div class="flex space-x-4">
+                <a href="#" class="text-gray-300 hover:text-white transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h4v4H8zm0 4h4v4H8zm8-8h4v4h-4zm0 4h4v4h-4z" />
+                  </svg>
+                </a>
+                <a href="#" class="text-gray-300 hover:text-white transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h4v4H8zm0 4h4v4H8zm8-8h4v4h-4zm0 4h4v4h-4z" />
+                  </svg>
+                </a>
+                <a href="#" class="text-gray-300 hover:text-white transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h4v4H8zm0 4h4v4H8zm8-8h4v4h-4zm0 4h4v4h-4z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-blue-700 mt-8 pt-4 text-center">
+          <p class="text-sm text-gray-400">&copy; 2023 NOT KITE. All rights reserved.</p>
         </div>
       </div>
-      <!-- Lab 7 -->
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <img src="https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=Lab+7" alt="Lab 7" class="w-full md:w-1/2 rounded-2xl shadow-lg border border-blue-200" />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2 text-blue-700">Lab 7</h3>
-          <p class="text-gray-600">Description for Lab 7. Impact and publications.</p>
+    </footer>
+
+    <!-- Lab Data and Card Generation Scripts -->
+    <script src="labs-data.js"></script>
+    <script>
+      // filepath: d:\University\UHN\Website\KITE-lab-website-mockup\index.html
+      // Dynamically generate lab cards from labs-data.js
+      const container = document.getElementById('labs-cards-container');
+      labs.forEach(lab => {
+        const card = document.createElement('div');
+        card.className = "group flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center hover:shadow-lg transition transform hover:scale-105 relative";
+        card.innerHTML = `
+          <img src="${lab.image}" alt="${lab.name}" class="rounded-xl mb-4 w-full h-40 object-cover" />
+          <h3 class="text-lg font-bold text-blue-700">${lab.name}</h3>
+          <div class="absolute inset-0 bg-white/95 rounded-2xl flex flex-col items-center justify-center px-4 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200">
+            <p class="text-gray-700 text-sm">${lab.description}</p>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      // Add scroll functionality for arrows
+      const scrollContainer = document.getElementById('labs-cards-container');
+      document.getElementById('scroll-left').onclick = () => {
+        scrollContainer.scrollBy({ left: -320, behavior: 'smooth' });
+      };
+      document.getElementById('scroll-right').onclick = () => {
+        scrollContainer.scrollBy({ left: 320, behavior: 'smooth' });
+      };
+
+      // Smooth scroll for "Explore Our Labs"
+      document.getElementById('explore-labs-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('labs').scrollIntoView({ behavior: 'smooth' });
+      });
+    </script>
+  </body>
+</html>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h4v4H8zm0 4h4v4H8zm8-8h4v4h-4zm0 4h4v4h-4z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-blue-700 mt-8 pt-4 text-center">
+          <p class="text-sm text-gray-400">&copy; 2023 NOT KITE. All rights reserved.</p>
         </div>
       </div>
-      <!-- Lab 8 -->
-      <div class="flex flex-col md:flex-row-reverse items-center gap-8">
-        <img src="https://via.placeholder.com/400x250/2563EB/FFFFFF?text=Lab+8" alt="Lab 8" class="w-full md:w-1/2 rounded-2xl shadow-lg border border-blue-200" />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2 text-blue-700">Lab 8</h3>
-          <p class="text-gray-600">Description for Lab 8. Collaborations and focus.</p>
+    </footer>
+
+    <!-- Lab Data and Card Generation Scripts -->
+    <script src="labs-data.js"></script>
+    <script>
+      // filepath: d:\University\UHN\Website\KITE-lab-website-mockup\index.html
+      // Dynamically generate lab cards from labs-data.js
+      const container = document.getElementById('labs-cards-container');
+      labs.forEach(lab => {
+        const card = document.createElement('div');
+        card.className = "group flex-shrink-0 w-64 bg-blue-50 border border-blue-200 rounded-2xl shadow-md p-4 text-center hover:shadow-lg transition transform hover:scale-105 relative";
+        card.innerHTML = `
+          <img src="${lab.image}" alt="${lab.name}" class="rounded-xl mb-4 w-full h-40 object-cover" />
+          <h3 class="text-lg font-bold text-blue-700">${lab.name}</h3>
+          <div class="absolute inset-0 bg-white/95 rounded-2xl flex flex-col items-center justify-center px-4 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200">
+            <p class="text-gray-700 text-sm">${lab.description}</p>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      // Add scroll functionality for arrows
+      const scrollContainer = document.getElementById('labs-cards-container');
+      document.getElementById('scroll-left').onclick = () => {
+        scrollContainer.scrollBy({ left: -320, behavior: 'smooth' });
+      };
+      document.getElementById('scroll-right').onclick = () => {
+        scrollContainer.scrollBy({ left: 320, behavior: 'smooth' });
+      };
+    </script>
+  </body>
+</html>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition">Home</a></li>
+                <li><a href="#labs" class="text-gray-300 hover:text-white transition">Labs</a></li>
+                <li><a href="#about" class="text-gray-300 hover:text-white transition">About Us</a></li>
+                <li><a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a></li>
+              </ul>
+            </div>
+            <div class="mb-4 md:mb-0">
+              <h3 class="text-lg font-semibold">Follow Us</h3>
+              <div class="flex space-x-4">
+                <a href="#" class="text-gray-300 hover:text-white transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h4v4H8zm0 4h4v4H8zm8-8h4v4h-4zm0 4h4v4h-4z" />
+                  </svg>
+                </a>
+                <a href="#" class="text-gray-300 hover:text-white transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h4v4H8zm0 4h4v4H8zm8-8h4v4h-4zm0 4h4v4h-4z" />
+                  </svg>
+                </a>
+                <a href="#" class="text-gray-300 hover:text-white transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h4v4H8zm0 4h4v4H8zm8-8h4v4h-4zm0 4h4v4h-4z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-blue-700 mt-8 pt-4 text-center">
+          <p class="text-sm text-gray-400">&copy; 2023 NOT KITE. All rights reserved.</p>
         </div>
       </div>
-      <!-- Lab 9 -->
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <img src="https://via.placeholder.com/400x250/1D4ED8/FFFFFF?text=Lab+9" alt="Lab 9" class="w-full md:w-1/2 rounded-2xl shadow-lg border border-blue-200" />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2 text-blue-700">Lab 9</h3>
-          <p class="text-gray-600">Description for Lab 9. Methods and applications.</p>
-        </div>
-      </div>
-      <!-- Lab 10 -->
-      <div class="flex flex-col md:flex-row-reverse items-center gap-8">
-        <img src="https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=Lab+10" alt="Lab 10" class="w-full md:w-1/2 rounded-2xl shadow-lg border border-blue-200" />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2 text-blue-700">Lab 10</h3>
-          <p class="text-gray-600">Description for Lab 10. Research pipelines and tools.</p>
-        </div>
-      </div>
-      <!-- Lab 11 -->
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <img src="https://via.placeholder.com/400x250/2563EB/FFFFFF?text=Lab+11" alt="Lab 11" class="w-full md:w-1/2 rounded-2xl shadow-lg border border-blue-200" />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2 text-blue-700">Lab 11</h3>
-          <p class="text-gray-600">Description for Lab 11. Key directions and outcomes.</p>
-        </div>
-      </div>
-      <!-- Lab 12 -->
-      <div class="flex flex-col md:flex-row-reverse items-center gap-8">
-        <img src="https://via.placeholder.com/400x250/1D4ED8/FFFFFF?text=Lab+12" alt="Lab 12" class="w-full md:w-1/2 rounded-2xl shadow-lg border border-blue-200" />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2 text-blue-700">Lab 12</h3>
-          <p class="text-gray-600">Description for Lab 12. Translational work and impact.</p>
-        </div>
-      </div>
-      <!-- Lab 13 -->
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <img src="https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=Lab+13" alt="Lab 13" class="w-full md:w-1/2 rounded-2xl shadow-lg border border-blue-200" />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2 text-blue-700">Lab 13</h3>
-          <p class="text-gray-600">Description for Lab 13. Platforms and datasets.</p>
-        </div>
-      </div>
-      <!-- Lab 14 -->
-      <div class="flex flex-col md:flex-row-reverse items-center gap-8">
-        <img src="https://via.placeholder.com/400x250/2563EB/FFFFFF?text=Lab+14" alt="Lab 14" class="w-full md:w-1/2 rounded-2xl shadow-lg border border-blue-200" />
-        <div class="w-full md:w-1/2">
-          <h3 class="text-2xl font-bold mb-2 text-blue-700">Lab 14
+    </footer>
+  </body>
+</html>
 
