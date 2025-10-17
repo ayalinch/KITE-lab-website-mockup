@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Footwear Ratings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .shadow-soft { box-shadow: 0 6px 20px rgba(0,0,0,.08); }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-white to-slate-50 text-slate-900">
+
+  <!-- Top bar (matches your site style) -->
+  <nav class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-6">
+      <div class="flex items-center gap-2">
+        <!-- simple scale icon -->
+        <svg class="w-6 h-6 text-slate-900" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-width="1.5" d="M12 3v3m7 5-4 7H9l-4-7m14 0H5m14 0-2-5M5 11l2-5" />
+        </svg>
+        <span class="font-semibold">RateMyTreads</span>
+      </div>
+
+      <div class="ml-auto flex items-center gap-2 w-full max-w-xl">
+        <div class="relative flex-1">
+          <svg class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="7" stroke-width="1.5"></circle>
+            <path d="m20 20-3-3" stroke-width="1.5"></path>
+          </svg>
+          <input id="search" class="w-full border rounded-lg pl-9 pr-3 py-2 text-sm"
+                 placeholder="Search brand, model…" />
+        </div>
+        <button id="clearFilters" class="hidden sm:inline-flex border rounded-lg px-3 py-2 text-sm">Clear</button>
+        <a href="index.html" class="hidden sm:inline-flex bg-blue-700 text-white px-4 py-2 rounded-lg text-sm">Back to site</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero categories -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- tiles populated by JS with same layout/CTA -->
+      <div id="tiles" class="contents"></div>
+    </div>
+  </section>
+
+  <!-- Quick filters -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-2">
+    <div class="flex flex-wrap items-center gap-3">
+      <span class="text-sm font-medium mr-1">Gender:</span>
+      <button data-filter="gender" data-value="Women" class="chip">Women</button>
+      <button data-filter="gender" data-value="Men" class="chip">Men</button>
+
+      <span class="text-sm font-medium ml-4 mr-1">Rating:</span>
+      <button data-filter="rating" data-value="1" class="chip">
+        <span class="inline-flex items-center gap-1">
+          <span class="sf sf-1"></span><span class="text-xs">1</span>
+        </span>
+      </button>
+      <button data-filter="rating" data-value="2" class="chip">
+        <span class="inline-flex items-center gap-1">
+          <span class="sf sf-2"></span><span class="text-xs">2</span>
+        </span>
+      </button>
+      <button data-filter="rating" data-value="3" class="chip">
+        <span class="inline-flex items-center gap-1">
+          <span class="sf sf-3"></span><span class="text-xs">3</span>
+        </span>
+      </button>
+
+      <span class="text-sm font-medium ml-4 mr-1">Category:</span>
+      <button data-filter="category" data-value="casual" class="chip">Casual</button>
+      <button data-filter="category" data-value="work" class="chip">Work Safety</button>
+      <button data-filter="category" data-value="spikes" class="chip">Spikes</button>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-16">
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="text-2xl md:text-3xl font-bold">Best Rated Footwear</h2>
+      <div id="count" class="text-sm text-slate-600"></div>
+    </div>
+    <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+    <div id="empty" class="hidden text-center py-16 text-slate-600">No matches. Try different filters.</div>
+  </section>
+
+  <!-- Compare tray -->
+  <aside id="tray" class="fixed bottom-4 left-4 right-4 z-50 translate-y-28 transition">
+    <div class="max-w-7xl mx-auto">
+      <div class="rounded-2xl border bg-white shadow-soft p-4">
+        <div class="flex items-center justify-between mb-2">
+          <h4 class="font-semibold">Compare (<span id="trayCount">0</span>/3)</h4>
+          <button id="trayClear" class="text-sm text-slate-600">Clear</button>
+        </div>
+        <div id="trayGrid" class="grid grid-cols-1 sm:grid-cols-3 gap-3"></div>
+        <div class="flex justify-end mt-3">
+          <a href="#" class="bg-slate-900 text-white px-4 py-2 rounded-lg">Open detailed compare</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Tiny icon + chip helpers -->
+  <template id="snowflake">
+    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M11 2h2v7.17l3.59-3.58L18 7l-5 5-5-5 1.41-1.41L11 9.17V2zm0 20h2v-7.17l3.59 3.58
